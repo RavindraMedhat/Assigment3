@@ -1,0 +1,11 @@
+<form (ngSubmit)="onSubmit()"> 
+    <br><br>
+    Owner Name :-   <input type="text" name="OwnerName" [(ngModel)]="fdata.OwnerName" id=""><br><br>
+    Number Plate :- <input type="text" name="NumberPlate" [(ngModel)]="fdata.NumberPlate" id=""><br><br><br>
+    <input type="submit" value="Add">
+</form>
+
+<div *ngIf="submit===true">
+{{fdata.OwnerName}}
+{{fdata.NumberPlate}}
+</div>

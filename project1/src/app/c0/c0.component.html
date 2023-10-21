@@ -1,0 +1,38 @@
+
+<p>
+    {{code}}
+    {{n1}}
+    
+    DATE :- 
+    {{RDate}}
+  </p> 
+
+  <div>
+    <ul>
+      <li *ngFor = "let np of numberPlate " >
+        
+        {{np}}
+      </li>
+    </ul>
+  </div>
+  
+  <select [(ngModel)]="selectedNP" (change)="OnChange()">
+    <option *ngFor = "let np of numberPlate ">
+      {{np}}
+    </option>
+  </select>
+  
+  
+  <select [(ngModel)]="selection" (change)="OnChange()">
+    <option *ngFor = "let np of TextNP ">
+      {{np}}
+    </option>
+  </select>
+  
+  <div *ngIf="selection==='Text Box'">
+    <input type="text" id="" [(ngModel)]="selectedNP" >
+    </div>
+  
+    <div *ngIf="selection==='Text Area'">
+    <textarea rows="5"  cols="10" [(ngModel)]="selectedNP"> </textarea>
+    </div>

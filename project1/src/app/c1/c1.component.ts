@@ -1,0 +1,18 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-c1',
+  templateUrl: './c1.component.html',
+  styleUrls: ['./c1.component.css']
+})
+export class C1Component {
+fdata={
+  OwnerName:"",
+  NumberPlate:"",
+}
+submit=false;
+onSubmit()
+{
+  this.submit=true;
+}
+}
